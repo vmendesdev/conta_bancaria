@@ -8,15 +8,12 @@ public abstract class Conta {
 	private String titular;
 	private float saldo;
 	
-	//Criação do construtor
 	public Conta(int numero, int agencia, int tipo, String titular, float saldo) {
 		this.numero = numero;
 		this.agencia = agencia;
 		this.tipo = tipo;
 		this.titular = titular;
 		this.saldo = saldo;
-		//this.numero é o atributo da classe
-		//= numero; é o parâmetro do método construtor
 	}
 
 	public int getNumero() {
