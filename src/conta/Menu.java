@@ -1,7 +1,6 @@
 package conta;
 
 import java.io.IOException;
-import java.io.ObjectInputFilter.Config;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -24,7 +23,7 @@ public class Menu {
 		float saldo, limite = 0, valor;
 
 		System.out.println("\nCriar Conta\n");
-		
+		/*
 		ContaCorrente cc1 = new ContaCorrente(contas.gerarNumero(), 123, 1, "João da Silva", 1000f, 100.0f);
 		contas.cadastrar(cc1);
 		
@@ -35,13 +34,13 @@ public class Menu {
 		contas.cadastrar(cp1);
 		
 		ContaPoupanca cp2 = new ContaPoupanca(contas.gerarNumero(), 126, 2, "Juliana Ramos", 8000f, 100.0f, 4);
-		contas.cadastrar(cp2);
+		contas.cadastrar(cp2);*/
 		
 		contas.listarTodas();
 	
 		while (true) {
 			
-			System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND + "***************************************************");
+			System.out.println(Cores.TEXT_BLUE + Cores.ANSI_WHITE_BACKGROUND + "***************************************************");
 			System.out.println("                                                  ");
 			System.out.println("                BANCO DO BRAZIL                   ");
 			System.out.println("                                                  ");
@@ -228,7 +227,7 @@ public class Menu {
 		// TODO Auto-generated method stub
 		System.out.println("\n*******************************************************");
 		System.out.println("Projeto Desenvolvido por: Vanessa Mendes");
-		System.out.println("Generation Brasil - generation@generation.org");
+		System.out.println("Contato - vanessam.mendes@outlook.com.br");
 		System.out.println("github.com/vmendesdev");
 		System.out.println("********************************************************");
 	}

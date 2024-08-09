@@ -13,7 +13,7 @@ public class ContaController implements ContaRepository{
 	@Override
 	public void procurarPorNumero(int numero) {
 		// TODO Auto-generated method stub
-		var conta = buscarNaCollection(numero);
+		var conta = buscaNaCollection(numero);
 		
 		if (conta != null) {
 		conta.visualizar();
@@ -40,7 +40,7 @@ public class ContaController implements ContaRepository{
 	@Override
 	public void atualizar(Conta conta) {
 		// TODO Auto-generated method stub
-		var buscaConta = buscarNaCollection(conta.getNumero());
+		var buscaConta = buscaNaCollection(conta.getNumero());
 		
 		if (buscaConta != null) {
 			listaContas.set(listaContas.indexOf(buscaConta), conta);
@@ -55,7 +55,7 @@ public class ContaController implements ContaRepository{
 	@Override
 	public void deletar(int numero) {
 		// TODO Auto-generated method stub
-		var conta = buscarNaCollection(numero);
+		var conta = buscaNaCollection(numero);
 		
 		if (conta != null) {
 			if(listaContas.remove(conta) == true);
@@ -66,7 +66,7 @@ public class ContaController implements ContaRepository{
 	@Override
 	public void sacar(int numero, float valor) {
 		// TODO Auto-generated method stub
-		var conta = buscarNaCollection(numero);
+		var conta = buscaNaCollection(numero);
 		
 		if (conta != null) {
 			if (conta.sacar(valor) == true);
@@ -80,7 +80,7 @@ public class ContaController implements ContaRepository{
 	@Override
 	public void depositar(int numero, float valor) {
 		// TODO Auto-generated method stub
-		var conta = buscarNaCollection(numero);
+		var conta = buscaNaCollection(numero);
 		
 		if (conta != null) {
 			conta.depositar(valor);
@@ -94,8 +94,8 @@ public class ContaController implements ContaRepository{
 	@Override
 	public void transferir(int numeroOrigem, int numeroDestino, float valor) {
 		// TODO Auto-generated method stub
-			var contaOrigem = buscarNaCollection(numeroOrigem);
-			var contaDestino = buscarNaCollection(numeroDestino);
+			var contaOrigem = buscaNaCollection(numeroOrigem);
+			var contaDestino = buscaNaCollection(numeroDestino);
 			
 			if (contaOrigem != null && contaDestino != null) {
 			
@@ -106,7 +106,7 @@ public class ContaController implements ContaRepository{
 		}
 }else {
 	System.out.println("\nA conta de origem e/ou destino não foram encontradas!");
-}
+	}}
 
 	public int gerarNumero() {
 		// TODO Auto-generated method stub
